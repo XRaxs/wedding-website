@@ -1,0 +1,183 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('gambar/login.jpg') no-repeat center center fixed;
+  /* Pastikan jalur gambar benar */
+  background-size: cover;
+  font-family: 'Poppins', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #000;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  /* Tambahkan margin lebih besar untuk spasi */
+  color: #333;
+}
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-login100 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.wrap-login100 {
+  width: 400px;
+  background: rgba(255, 255, 255, 0.6);
+  /* Warna putih dengan 50% opasitas */
+  border-radius: 10px;
+  padding: 40px 48px 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.login100-form {
+  width: 100%;
+}
+
+.login100-form-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  /* Tambahkan jarak lebih besar di sini */
+  font-weight: bold;
+}
+
+.wrap-input100 {
+  position: relative;
+  width: 100%;
+  border: 1px solid #dce9d7;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background: #f7faf5;
+}
+
+.input100 {
+  font-size: 12px;
+  /* Perkecil ukuran teks di dalam input */
+  color: #000;
+  width: 100%;
+  height: 40px;
+  /* Perkecil tinggi input */
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+}
+
+.focus-input100 {
+  position: absolute;
+  top: 10px;
+  /* Sesuaikan posisi placeholder saat tidak fokus */
+  left: 20px;
+  color: #808080;
+  transition: all 0.3s;
+}
+
+.input100:focus + .focus-input100,
+.input100:not(:placeholder-shown) + .focus-input100 {
+  top: -10px;
+  font-size: 12px;
+  color: #d5e4cf;
+}
+
+.btn-show-pass {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-login100-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.login100-form-btn {
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  background: #AFC2AE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login100-form-btn:hover {
+  background: #d5e4cf;
+}
+
+.alert {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.alert-info {
+  background-color: #e7f3fe;
+  color: #31708f;
+  border: 1px solid #bce8f1;
+}
+
+.alert-danger {
+  background-color: #f2dede;
+  color: #a94442;
+  border: 1px solid #ebccd1;
+}
+
+.text-center {
+  margin-top: 20px;
+  /* Tambahkan jarak di atas teks "Don’t have an account?" */
+}
+
+.link-container {
+ 
+  align-items: center;
+  margin-top: 10px;
+  /* Jarak antar elemen */
+}
+
+.txt1 {
+  color: #333;
+  font-size: 14px;
+}
+
+.txt2 {
+  color: #AFC2AE;
+  font-size: 14px;
+  text-decoration: none;
+  margin-left: 5px;
+  /* Jarak kiri teks tautan */
+}
+
+.txt2:hover {
+  color: #d5e4cf;
+  text-decoration: underline;
+}

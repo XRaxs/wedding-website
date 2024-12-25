@@ -1,0 +1,784 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+@font-face {
+    font-family: 'Sarasvati';
+    src: url('path/to/sarasvati.woff2') format('woff2'),
+         url('path/to/sarasvati.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.navbar {
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Position it at the top */
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Make sure it stays on top of other elements */
+    background-color: white; /* Set a background color */
+    padding: 10px 0;
+    color: black;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.navbar .brand {
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar .search-container {
+    display: flex;
+    align-items: center;
+    position: relative; /* Position relative to place the search icon correctly */
+}
+
+.navbar .search-container input[type="text"] {
+    padding: 6px;
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 0.1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 5px;
+    padding-left: 30px;
+}
+
+.navbar .search-container .fa-search {
+    color: #AFC2AE;
+    font-size: 12px;
+    position: absolute;
+    left: 10px; /* Position icon inside the input field */
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.navbar .nav-links li {
+    margin-left: 40px;
+}
+
+.navbar .nav-links a {
+    color: black;
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-links a {
+    position: relative;
+    color: #9BA79D; /* Warna tautan ketika belum diklik */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.nav-links a.active {
+    color: #9BA79D; /* Warna tautan yang aktif */
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Jarak underline dari teks */
+    width: 100%; /* Lebar underline */
+    height: 2px; /* Ketebalan underline */
+    background-color: transparent;
+    transition: background-color 0.3s ease; /* Efek transisi warna underline */
+}
+
+.nav-links a.active::after,
+.nav-links a:hover::after {
+    background-color: #9BA79D; /* Warna underline saat tautan aktif atau hover */
+    animation: flowUnderline 0.3s ease; /* Animasi underline */
+}
+
+@keyframes flowUnderline {
+    from {
+        width: 0; /* Lebar underline dari 0 */
+        left: 50%; /* Mulai dari tengah */
+        background-color: transparent; /* Warna transparent */
+    }
+    to {
+        width: 100%; /* Mencapai lebar penuh */
+        left: 0; /* Kembali ke awal (kiri) */
+        background-color: black; /* Warna underline */
+    }
+}
+
+  
+
+.hero {
+    margin-top: 50px;
+    font-family: 'Playfair Display', serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #f7faf5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the content vertically */
+    height: 70%;
+    position: relative;
+    padding: 20px;
+}
+
+.containerr {
+   
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the content vertically */
+}
+
+.hero-text {
+   margin-top: -30px;
+    width: 100%;
+   
+}
+
+.top-text {
+    margin-bottom: 20px;
+    font-size: 60px;
+   margin-left: 30px;
+    color: black;
+    justify-content: left;
+}
+
+.hero-line {
+    
+    border-top: 1px solid black;
+    width: 60%;
+  margin-left: 250px;
+}
+
+.bottom-text {
+    margin-top: 10px;
+    font-size: 45px;
+    margin-left: 500px;
+    color: #9BA79D;
+    justify-content: right;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 15px; /* Adjust the margin to separate from text */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    
+}
+
+
+.containergal {
+    margin-top: 300px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    margin-bottom: 100px;
+}
+
+
+
+h2 {
+    margin-top: 10px;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-weight: 200px;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+.gallery-grid {
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+}
+
+.gallery-item {
+   
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Ensure items take full width of their column */
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Specific styles for each item */
+.item1 {
+    margin-top: 80px;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    width: 250px;
+    height: 350px;
+    
+}
+
+.item2 {
+    background-color: #e9ecef;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    height: 160px;
+    
+}
+
+.item3 {
+    background-color: #e9ecef;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    height: 160px;
+    margin-top: 200px; 
+   
+}
+
+.item4 {
+    margin-top: 80px;
+   
+    width: 250px;
+    height: 278px;
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-top {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in-bottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.h12 {
+    margin-top: 10px;
+    text-align: center;
+    color: black;
+    font-size: 32px;
+    font-weight: semibold;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+.package-container {
+    padding: 20px;
+    margin-left: 35px;
+    margin-right: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.package-card {
+    margin-top: -20px;
+    width: 200px;
+    height: 420px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.06);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.namapaket{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 250;
+    /* Semi-bold */
+    font-size: 16px;
+    margin-bottom: -3px;
+    /* Ubah margin bottom menjadi lebih kecil */
+    margin-top: 2px;
+}
+.description-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #8d8b8b;
+    line-height: 1.6;
+    /* Menambah keterbacaan dengan jarak antar baris */
+    margin: -15px 0 20px 0;
+    /* Jarak atas dan bawah */
+    text-align: center;
+    /* Menyelaraskan teks ke tengah */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.packimg {
+    width: 100%;
+    height: 58%;
+    
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    
+}
+
+
+.rating {
+    color: rgba(103, 101, 98, 0.79);
+    margin-bottom: -13px;
+    /* Ubah margin bottom menjadi lebih kecil */
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.rating .stars {
+    margin-right: 5px;
+}
+
+.rating .reviews {
+    color: #666;
+    font-size: 10px;
+}
+
+.package-card .ordered {
+    margin-bottom: -5px;
+    font-size: 10px;
+    color: #666;
+}
+
+.package-card .price {
+    font-size: 14px;
+    /* Ubah ukuran font untuk harga */
+    color: #9BA79D;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.package-card .btn {
+    margin-top: 5px;
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: transparent; /* Transparan agar stroke terlihat */
+    color: #000000; /* Warna teks hitam */
+    border: 0.5px solid #e4e0e0; /* Garis tepi hitam */
+    text-decoration: none;
+    border-radius: 1px;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: -5px;
+    width: 166px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;   
+
+}
+
+.package-card .btn :hover {
+    background-color: #000000; /* Latar belakang hitam saat di-hover */
+    color: #ffffff; /* Warna teks putih saat di-hover */
+}
+
+
+.booking {
+    margin-top: -50px;
+    font-size: 12px;
+    animation: fadeInUp 1s ease;
+    margin-bottom: 50px;
+  }
+  
+  .booking label {
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .booking input[type="text"],
+  .booking input[type="email"],
+  
+  .booking select,
+  .booking button {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+
+  .booking input[type="date"]{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .booking .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .booking .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .booking .form-column {
+    width: calc(50% - 10px);
+  }
+  
+  .booking .form-column.full-width {
+    width: 100%;
+  }
+  
+  .booking input[readonly] {
+    background-color: rgba(255, 255, 255, 0.06);
+    color: black;
+  }
+  
+  .booking button {
+    margin-top: 5px;
+    padding: 6px 14px;
+    background-color: transparent;
+    color: #000;
+    border: 0.5px solid #e0dbdb;
+    text-decoration: none;
+    border-radius: 1px;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: -5px;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .booking button:hover {
+    background-color: #515652;
+    color: white;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+footer {
+    background-color: #333;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Animasi muncul dari bawah */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-icon{
+    font-size: 12px;
+    
+    font-family: 'Poppins', Arial, sans-serif;
+}
+.notification-icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.notification-container {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Adjust this to match the width */
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease; /* Slide-in effect */
+    z-index: 1000; /* Ensure it is above other content */
+    overflow-y: auto;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.notification-header h4 {
+    margin: 0;
+    font-size: 12px;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.close-btn {
+    background: none;
+    color: black;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.notification-content {
+    margin-left: 10px;
+    max-height: fit-content; /* Atur tinggi maksimum tampilan notifikasi */
+    overflow-y: auto; 
+    font-size: 12px;/* Aktifkan scrolling vertikal jika konten melebihi tinggi maksimum */
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.notification-item {
+    background-color: #f3f4f6; /* Warna latar belakang untuk setiap pesan notifikasi */
+    border-radius: 8px; /* Atur radius sudut untuk menampilkan bentuk kotak */
+    margin-bottom: 8px; /* Atur jarak antara setiap pesan notifikasi */
+    padding: 10px; /* Atur padding di dalam pesan notifikasi */
+    cursor: pointer; /* Ubah kursor menjadi tanda panah saat diarahkan ke pesan notifikasi */
+    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+}
+
+.notification-item:hover {
+    background-color: #e2e4e8; /* Warna latar belakang saat mouse hover */
+}
+
+.notification-item:last-child {
+    margin-bottom: 0; /* Hapus margin bawah dari pesan notifikasi terakhir */
+}
+
+.notification-item .notification-content {
+    display: block; /* Gunakan tata letak blok untuk konten pesan */
+    max-width: 70%; /* Atur lebar maksimum pesan notifikasi */
+    word-wrap: break-word; /* Pisahkan kata-kata saat konten melebihi lebar maksimum */
+}
+
+.notification-item .notification-content tr {
+    display: block; /* Gunakan tata letak blok untuk setiap baris */
+    margin-bottom: 4px; /* Atur jarak antara setiap baris */
+}
+
+
+/* Animation for sliding in from the right */
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Tambahkan gaya untuk pesan terima kasih */
+.thankyou-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 9999; /* Pastikan pesan tampil di atas konten lain */
+}
+footer {
+    background-color: #000;
+    padding: 20px 0;
+    color: white;
+    padding-top: 30px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .social-icons {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    margin-left: 100px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column; /* Vertically align items */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .social-icons a,
+  .social-icons span {
+    margin-bottom: 4px; /* Space between icons and text */
+    display: flex;
+    align-items: center; /* Align icons and text */
+  }
+  
+  .social-icons a i {
+    margin-right: 8px; /* Space between icon and text */
+  }
+  
+  .logo {
+    justify-content: left;
+    font-size: 60px;
+    font-weight: 500;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 100px;
+  }
+  
+  .logo img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  .copyright {
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  
+  .feedback-form {
+    display: none; /* Form rating disembunyikan secara default */
+  }
+  
+  .notification-container {
+    position: fixed;
+    right: -300px; /* Atur ke nilai negatif untuk menyembunyikan di luar layar */
+    transition: right 0.5s ease;
+}
+
+.notification-container.show {
+    right: 0; /* Atur ke nilai 0 saat ditampilkan */
+}
+
+
+.notification-container.hidden {
+    display: none; /* Sembunyikan elemen saat tidak ditampilkan */
+}
+
+  .hidden {
+    display: none;
+}
